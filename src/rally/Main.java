@@ -61,19 +61,12 @@ public class Main {
         Mechanic<Track> stathamJason = new Mechanic<>("Statham Jason", "Audi");
 
 
-        lada.setMechanics(willSmith);
-        lada.setMechanics(willSmith);
-        lada.setMechanics(jackLite);
-        gaz.setMechanics(komkovDmitry);
-        bmw.setMechanics(ivanIvanov);
-        System.out.println(lada.getMechanics().size());
-        System.out.println(lada.getMechanics().toString());
-        System.out.println(bmw.getMechanics().toString());
-        lada.getAllTeam();
-        bmw.getAllTeam();
-        volvo.setMechanics(stathamJason);
-        volvo.setMechanics(sazonovRoman);
-        volvo.getAllTeam();
+        lada.setMechanics(lada,willSmith);
+        lada.setMechanics(lada,willSmith);
+        bmw.setMechanics(bmw,ivanIvanov);
+        volvo.setMechanics(volvo,stathamJason);
+        lada.getAllTeam(lada);
+        volvo.getAllTeam(volvo);
     }
 
 

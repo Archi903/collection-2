@@ -1,6 +1,7 @@
 package rally;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public abstract class Transport<T extends Driver> implements Competing {
 
@@ -8,7 +9,7 @@ public abstract class Transport<T extends Driver> implements Competing {
     private final String model;
     private double engineVolume;
     private T driver;
-    private final ArrayList mechanics;
+    private Map<Transport, Mechanic> mechanics = new HashMap<>();
 
     private static final double DEFAULT_ENGINE_VALUE = 1.5;
 
@@ -17,7 +18,7 @@ public abstract class Transport<T extends Driver> implements Competing {
         this.model = model;
         setEngineVolume(engineVolume);
         setDriver(driver);
-        this.mechanics = new ArrayList();
+        this.mechanics = new HashMap<>();
     }
 
     public double getEngineVolume() {
@@ -66,15 +67,16 @@ public abstract class Transport<T extends Driver> implements Competing {
 
     public abstract void testCar();
 
-    public ArrayList getMechanics() {
-        return new ArrayList (mechanics);
+    public Map getMechanics() {
+        return mechanics;
     }
 
-    public void setMechanics(Mechanic mechanics) {
-        this.mechanics.add(mechanics);
+    public void setMechanics(Transport transport, Mechanic mechanic) {
+        this.mechanics.put(transport, mechanic);
     }
 
-    public void getAllTeam (){
-        System.out.println("У транспорта: " + getBrand() + " " + getModel() + " за рулем " + getDriver() + ", а обслуживает: " + getMechanics());
+
+    public void getAllTeam (Transport transport){
+        System.out.println("У транспорта: " + getBrand() + " " + getModel() + " за рулем " + getDriver() + ", а обслуживает: " + getMechanics().get(transport));
     }
 }
