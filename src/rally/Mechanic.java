@@ -35,4 +35,6 @@ public class Mechanic<T extends Transport> {
     public String toString() {
         return "Механик: " + name + " из компании - " + getCompany();
     }
+
 }
+

@@ -31,19 +31,6 @@ public class Track extends Transport<DriverB> {
         super(brand, model, engineVolume, driver);
     }
 
-    @Override
-    public void startCar() {
-        super.startCar();
-    }
-
-    public void stopCar() {
-        super.stopCar();
-    }
-
-    @Override
-    public void pitStop() {
-        super.pitStop();
-    }
 
     @Override
     public void bestLap() {
@@ -89,4 +76,5 @@ public class Track extends Transport<DriverB> {
     public void testCar() {
         System.out.println("Пройти диагностику");
     }
+
 }

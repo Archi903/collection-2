@@ -37,21 +37,6 @@ public class Car extends Transport<DriverA> {
         super(brand, model, engineVolume, driver);
     }
 
-
-    @Override
-    public void startCar() {
-        super.startCar();
-    }
-
-    public void stopCar() {
-        super.stopCar();
-    }
-
-    @Override
-    public void pitStop() {
-        super.pitStop();
-    }
-
     @Override
     public void bestLap() {
         int maxBound = 8;
@@ -98,5 +83,6 @@ public class Car extends Transport<DriverA> {
                 ", мощность двигателя = " + getEngineVolume();
 
     }
+
 
 }

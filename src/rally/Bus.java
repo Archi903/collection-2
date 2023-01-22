@@ -57,9 +57,6 @@ public class Bus extends Transport<DriverC> {
         System.out.println("Максимальная скорость у " + getBrand() + " " + getModel() + " " + ": " + maxSpeed + "км");
     }
 
-    public void pitStop() {
-        super.pitStop();
-    }
 
     public BodyType getBodyType() {
         return bodyType;
@@ -86,8 +83,9 @@ public class Bus extends Transport<DriverC> {
     }
     @Override
     public void testCar() {
-
+        System.out.println("Пройти диагностику");
     }
+
 
 }
 

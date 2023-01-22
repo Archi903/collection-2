@@ -2,6 +2,8 @@ package rally;
 
 import exception.NoDriveLicenseException;
 
+import java.util.Set;
+
 
 public class Main {
     public static void main(String[] args){
@@ -61,12 +63,17 @@ public class Main {
         Mechanic<Track> stathamJason = new Mechanic<>("Statham Jason", "Audi");
 
 
-        lada.setMechanics(lada,willSmith);
-        lada.setMechanics(lada,willSmith);
+        lada.setMechanics(lada, willSmith);
+        lada.setMechanics(lada,bornJason);
+        lexus.setMechanics(lexus, willSmith);
         bmw.setMechanics(bmw,ivanIvanov);
         volvo.setMechanics(volvo,stathamJason);
         lada.getAllTeam(lada);
         volvo.getAllTeam(volvo);
+        lexus.getAllTeam(lexus);
+       System.out.println(lada.getMechanics().size());
+
+
     }
 
 
