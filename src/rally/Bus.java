@@ -83,7 +83,7 @@ public class Bus extends Transport<DriverC> {
     }
     @Override
     public void testCar() {
-        System.out.println("Пройти диагностику");
+        System.out.println("Автобусам не требуется ТО");
     }
 
 
